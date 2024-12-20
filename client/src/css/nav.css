@@ -26,6 +26,11 @@
   
 }
 
+.First{
+  font-size:200%;
+  padding:0;
+}
+
 /* hr 스타일링 */
 .divider {
   width: 100%; /* 가로 길이 */

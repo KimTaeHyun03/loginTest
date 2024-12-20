@@ -14,6 +14,7 @@ let Login = ()=>{
 																pwSend:pw,
 												});
 												alert('성공');
+												
 								
 				} catch(error) {
 								alert('실패');

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const App = () => {
+const Main = () => {
   const [userData, setUserData] = useState([]); // 사용자 데이터를 저장할 상태
   const [error, setError] = useState(null); // 에러 메시지 상태
 
@@ -9,7 +9,7 @@ const App = () => {
     // 데이터를 가져오는 비동기 함수
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3030/data'); // 서버에서 데이터 가져오기
+        const response = await axios.get('http://localhost:3030/data/get'); // 서버에서 데이터 가져오기
         setUserData(response.data || []); // 가져온 데이터를 상태에 저장 (users 배열)
       } catch (err) {
         setError(err.message); // 에러 발생 시 상태에 저장
@@ -37,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;
