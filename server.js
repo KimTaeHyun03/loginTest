@@ -111,3 +111,18 @@ app.post('/data/add', async (req, res) => {
     res.status(401).json({ message: '로그인 실패: 아이디 또는 비밀번호가 일치하지 않습니다.' });
   }
 });
+
+app.post('/api/checkId', async (req, res) => {
+  
+    const { idCheck } = req.body;
+    
+    const Id = idpw.loginId; // 기본값 'admin'
+												if (Id == idCheck){
+												  res.status(555).send('아이디 중복 있음');
+												} else{
+												  res.status(200).send('아이디 중복 없음');
+												}
+  
+  
+});
+
