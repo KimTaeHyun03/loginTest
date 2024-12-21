@@ -19,6 +19,14 @@
   text-align:center;
 }
 
+.signInBtn{
+  background-color:blue;
+  color:white;
+  margin-left:10px;
+  font-size:20px;
+  text-align:center;
+}
+
 .loginBtn:hover{
   color:white;
 }

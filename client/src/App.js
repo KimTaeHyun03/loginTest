@@ -8,7 +8,7 @@ import Main from './page/main.js';
 import Login from './page/login.js';
 import Insert from './page/insert.js';
 import List from './page/list.js';
-
+import SignIn from './page/signIn.js';
 //앱 컴포넌트
 function App() {
   
@@ -25,6 +25,7 @@ function App() {
       <Route path="/list" element={<List/>} />
       <Route path="/info" element={<div>정보창</div>} />
       <Route path="/login" element={<Login/>} />
+  										<Route path="/signIn" element={<SignIn/>} />
     </Routes>
   
   

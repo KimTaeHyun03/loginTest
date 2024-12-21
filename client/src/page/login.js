@@ -1,6 +1,9 @@
 import axios from 'axios'
 import {useState, useEffect} from 'react';
-import './../css/login.css'
+import { Link } from "react-router-dom";
+
+import './../css/login.css';
+
 
 let Login = ()=>{
 				let url=process.env.URL;
@@ -56,8 +59,10 @@ let Login = ()=>{
 				<span className='loginBtn' onClick={loginTest}>
 								로그인
 				</span>
+				<Link to='/signIn' className='signInBtn'>
+								회원가입
+				</Link>
 				</div>
-				
 				
 				</>
 				)}

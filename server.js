@@ -31,8 +31,10 @@ new MongoClient(url).connect().then((client) => {
 
 
 // 환경변수에 저장된 ID와 PW
-const Id = process.env.loginId; // 기본값 'admin'
-const Pw = process.env.password; // 기본값 '1234'
+const idpw = JSON.parse(process.env.IDPW1);
+
+const Id = idpw.loginId; // 기본값 'admin'
+const Pw = idpw.password; // 기본값 '1234'
 
 // 로그인 API
 app.post('/api/login', (req, res) => {
@@ -41,7 +43,7 @@ app.post('/api/login', (req, res) => {
   if (idSend === Id && pwSend === Pw) {
     // ID와 PW가 일치할 경우
     res.status(200).json({ message: '로그인 성공' });
-    
+
     
   } else {
     // ID 또는 PW가 일치하지 않을 경우

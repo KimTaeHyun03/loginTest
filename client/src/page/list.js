@@ -6,11 +6,6 @@ const List = () => {
   const [userData, setUserData] = useState([]); // 사용자 데이터를 저장할 상태
   const [error, setError] = useState(null); // 에러 메시지 상태
   
-let show = ()=>{
-  
-}  
-  
-  
   
   useEffect(() => {
     // 데이터를 가져오는 비동기 함수
@@ -40,7 +35,10 @@ let show = ()=>{
           <li key={index} >
           		<div className='content'>  
           						<span className='contentLi'>{user.title} - {user.content} </span>
-          						<span className='delContent' onClick=()=>{show}>전체글 보기</span>
+          						<span className='delContent' 
+          //onClick={()=>{show()}}
+          >
+          전체글 보기</span>
           		</div>
           		<hr/>
           </li>
